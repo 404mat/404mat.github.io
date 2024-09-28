@@ -1,0 +1,39 @@
+{
+  "info": {
+    "type": "html",
+    "name": "collection name",
+    "slug": "collection-name",
+    "description": "collection description",
+    "version": "0.0.1",
+    "author": "developer",
+    "collectionWebsiteLink": "link to website",
+    "privacy": "public",
+    "icon": "icon link",
+    "languages": ["en"]
+  },
+  "explore": {
+    "link": "explore link",
+    "functions": {
+      "mapToBooksSections": "RAW TEXT CODE HERE"
+    }
+  },
+  "search": {
+    "searchLink": "search link",
+    "searchSyntax": "search syntax",
+    "functions": {
+      "mapToBooksArray": "RAW TEXT CODE HERE"
+    }
+  },
+  "book": {
+    "link": "book link",
+    "functions": {
+      "getPages": "RAW TEXT CODE HERE"
+    }
+  },
+  "read": {
+    "linkToPages": "read link",
+    "functions": {
+      "getPages": "RAW TEXT CODE HERE"
+    }
+  }
+}
