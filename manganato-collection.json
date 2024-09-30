@@ -6,7 +6,8 @@
     "description": "collection description",
     "version": "0.0.1",
     "author": "developer",
-    "collectionWebsiteLink": "link to website",
+    "collectionLink": "link to collection",
+    "websiteLink": "link to website",
     "privacy": "public",
     "icon": "icon link",
     "languages": ["en"]
@@ -26,12 +27,6 @@
   },
   "book": {
     "link": "book link",
-    "functions": {
-      "getPages": "RAW TEXT CODE HERE"
-    }
-  },
-  "read": {
-    "linkToPages": "read link",
     "functions": {
       "getPages": "RAW TEXT CODE HERE"
     }
