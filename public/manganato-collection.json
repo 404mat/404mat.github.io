@@ -14,6 +14,7 @@
   },
   "explore": {
     "link": "https://manganato.com",
+    "syntax": "",
     "functions": {
       "fetchData": "function as string"
     }
