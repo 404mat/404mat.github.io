@@ -1,0 +1,34 @@
+{
+  "info": {
+    "type": "html",
+    "name": "MangaNato",
+    "slug": "manganato",
+    "description": "Manganato - Read Manga Online Free",
+    "version": "0.0.1",
+    "author": "developer",
+    "collectionLink": "link to collection",
+    "websiteLink": "https://manganato.com",
+    "privacy": "public",
+    "icon": "todo: add icon link",
+    "languages": ["en"]
+  },
+  "explore": {
+    "link": "https://manganato.com",
+    "functions": {
+      "fetchData": "function as string"
+    }
+  },
+  "search": {
+    "link": "https://manganato.com",
+    "syntax": "/search/story/",
+    "functions": {
+      "searchTerm": "function as string",
+      "fetchData": "function as string"
+    }
+  },
+  "book": {
+    "functions": {
+      "fetchData": "function as string"
+    }
+  }
+}
