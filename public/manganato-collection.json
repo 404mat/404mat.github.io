@@ -33,10 +33,10 @@
   },
   "chapter": {
     "functions": {
-      "fetchData": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const chapter = {}; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { chapter.pages.push($(element).attr('src')); }); return chapter;",
-      "imagesHeaders": {
-        "Referer": "https://chapmanganato.to/"
-      }
+      "fetchData": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const chapter = {}; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { chapter.pages.push($(element).attr('src')); }); return chapter;"
+    },
+    "imagesHeaders": {
+      "Referer": "https://chapmanganato.to/"
     }
   }
 }
