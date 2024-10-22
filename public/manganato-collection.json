@@ -4,9 +4,9 @@
     "name": "MangaNato",
     "slug": "manganato",
     "description": "Manganato - Read Manga Online Free",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "developer",
-    "collectionLink": "link to collection",
+    "collectionLink": "https://404mat.github.io/manganato-collection.json",
     "websiteLink": "https://manganato.com",
     "privacy": "public",
     "icon": "todo: add icon link",
@@ -23,13 +23,20 @@
     "link": "https://manganato.com",
     "syntax": "/search/story/",
     "functions": {
-      "searchTerm": "function as string",
-      "fetchData": "function as string"
+      "fetchData": "if (!htmlContent) { console.error('No HTML content to parse'); return []; } const $ = cheerio.load(htmlContent); const books = []; const results = $('div.panel-search-story') .children('div.search-story-item') .map((index, element) => { return { title: $(element).find('div.item-right h3 a').text(), author: $(element).find('div.item-right span.item-author').text(), image: $(element).find('img').attr('src'), url: $(element).find('div.item-right h3 a').attr('href'), description: '', chapters: $(element) .find('div.search-story-item div.item-right a.item-chapter') .map((chapIndex, chapElement) => { return { title: $(chapElement).text(), url: $(chapElement).attr('href'), date: null, pages: [], }; }) .get(), }; }) .get(); books.push(...results); return books;"
     }
   },
   "book": {
     "functions": {
-      "fetchData": "function as string"
+      "fetchData": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const book = {}; const mainElement = $('div.container-main-left'); book.title = $(mainElement).find('div.panel-story-info div.story-info-right h1').text(); book.author = $(mainElement) .find('div.panel-story-info div.story-info-right i.info-author') .parent() .parent() .find('td.table-value a') .text(); book.image = $(mainElement).find('div.panel-story-info div.story-info-left span.info-image img').attr('src') ?? ''; book.url = ''; book.description = ''; // book chapters book.chapters = $(mainElement) .find('div.panel-story-chapter-list ul') .children('li') .map((index, element) => { return { title: $(element).find('a').text(), url: $(element).find('a').attr('href'), date: new Date($(element).find('span.chapter-time').attr('title')), pages: [], }; }) .get(); return book;"
+    }
+  },
+  "chapter": {
+    "functions": {
+      "fetchData": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const chapter = {}; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { chapter.pages.push($(element).attr('src')); }); return chapter;",
+      "imagesHeaders": {
+        "Referer": "https://chapmanganato.to/"
+      }
     }
   }
 }
