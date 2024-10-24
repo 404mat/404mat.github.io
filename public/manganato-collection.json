@@ -26,7 +26,7 @@
     "fetchDataFunction": "if (!htmlContent) { console.error('No HTML content to parse for book info'); return {}; } const $ = cheerio.load(htmlContent); const book = {}; book.url = $('link[rel=\"canonical\"]').attr('href'); book.description = $('.panel-story-info-description').text() || ''; const mainElement = $('div.container-main-left'); book.title = $(mainElement).find('div.panel-story-info div.story-info-right h1').text(); book.author = $(mainElement) .find('div.panel-story-info div.story-info-right i.info-author') .parent() .parent() .find('td.table-value a') .text(); book.image = $(mainElement).find('div.panel-story-info div.story-info-left span.info-image img').attr('src') ?? ''; book.chapters = $(mainElement) .find('div.panel-story-chapter-list ul') .children('li') .map((index, element) => { return { title: $(element).find('a').text(), url: $(element).find('a').attr('href'), date: new Date($(element).find('span.chapter-time').attr('title')), pages: [], }; }) .get(); book.chapters.reverse(); return book;"
   },
   "chapter": {
-    "fetchDataFunction": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const chapter = {}; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { chapter.pages.push($(element).attr('src')); }); return chapter;",
+    "fetchDataFunction": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const imagesList = []; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { imagesList.push($(element).attr('src')); }); return imagesList;",
     "imagesHeaders": {
       "Referer": "https://chapmanganato.to/"
     }
