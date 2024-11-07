@@ -27,7 +27,7 @@
   },
   "chapter": {
     "fetchDataFunction": "if (!htmlContent) { console.error('No HTML content to parse'); return {}; } const $ = cheerio.load(htmlContent); const imagesList = []; const images = $('.container-chapter-reader').children('img'); images.map((index, element) => { imagesList.push($(element).attr('src')); }); return imagesList;",
-    "imagesHeaders": {
+    "headers": {
       "Referer": "https://chapmanganato.to/"
     }
   }
