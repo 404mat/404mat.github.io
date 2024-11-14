@@ -4,13 +4,13 @@
     "name": "MangaNato",
     "slug": "manganato",
     "description": "Manganato - Read Manga Online Free",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "author": "developer",
     "collectionLink": "https://404mat.github.io/manganato-collection.json",
     "websiteLink": "https://manganato.com",
     "privacy": "public",
-    "icon": "todo: add icon link",
-    "languages": ["en"]
+    "icon": "icon link",
+    "languages": "en"
   },
   "explore": {
     "link": "https://manganato.com",
