@@ -10,7 +10,7 @@
     "websiteLink": "https://manganato.com",
     "privacy": "public",
     "icon": "icon link",
-    "languages": "en"
+    "languages": ["en"]
   },
   "explore": {
     "link": "https://manganato.com",
