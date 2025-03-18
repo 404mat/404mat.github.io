@@ -1,0 +1,157 @@
+{
+  "info": {
+    "type": "html",
+    "name": "MangaNato",
+    "description": "Read Manga Online Free",
+    "version": "0.2.0",
+    "author": "developer",
+    "collectionLink": "https://404mat.github.io/manganato-collection.json",
+    "websiteLink": "https://manganato.com",
+    "icon": "icon link or base64",
+    "languages": ["en"]
+  },
+  "explore": {
+    "link": "https://manganato.com",
+    "syntax": null,
+    "dataFetching": [
+      {
+        "elements": "div#owl-slider.owl-carousel:first-child > div.item",
+        "type": "TopWeek",
+        "mapping": {
+          "title": {
+            "selector": "div.slide-caption h3 a[title]",
+            "attribute": "title"
+          },
+          "author": {
+            "selector": null,
+            "attribute": null
+          },
+          "image": {
+            "selector": "img[src]",
+            "attribute": "src"
+          },
+          "url": {
+            "selector": "div.slide-caption h3 a[href]",
+            "attribute": "href"
+          },
+          "description": {
+            "selector": null,
+            "attribute": null
+          }
+        }
+      },
+      {
+        "elements": "div.panel-content-homepage:first-child > div.content-homepage-item",
+        "type": "NewReleases",
+        "mapping": {
+          "title": {
+            "selector": "div.content-homepage-item-right h3 a[title]",
+            "attribute": "title"
+          },
+          "author": {
+            "selector": "div.content-homepage-item-right span.item-author",
+            "attribute": null
+          },
+          "image": {
+            "selector": "img[src]",
+            "attribute": "src"
+          },
+          "url": {
+            "selector": "div.content-homepage-item-right h3 a[href]",
+            "attribute": "href"
+          },
+          "description": {
+            "selector": null,
+            "attribute": null
+          }
+        }
+      }
+    ],
+    "headers": {}
+  },
+  "search": {
+    "link": "https://manganato.com",
+    "syntax": "/search/story/",
+    "dataFetching": [
+      {
+        "elements": "div.panel-search-story > div.search-story-item",
+        "type": null,
+        "mapping": {
+          "title": {
+            "selector": "div.item-right h3 a",
+            "attribute": null
+          },
+          "author": {
+            "selector": "div.item-right span.item-author",
+            "attribute": null
+          },
+          "image": {
+            "selector": "img[src]",
+            "attribute": "src"
+          },
+          "url": {
+            "selector": "div.item-right h3 a[href]",
+            "attribute": "href"
+          },
+          "description": {
+            "selector": null,
+            "attribute": null
+          }
+        }
+      }
+    ],
+    "headers": {}
+  },
+  "book": {
+    "link": null,
+    "syntax": null,
+    "dataFetching": [
+      {
+        "elements": null,
+        "type": null,
+        "mapping": {
+          "title": {
+            "selector": "div.panel-story-info div.story-info-right h1",
+            "attribute": null
+          },
+          "author": {
+            "selector": "todo",
+            "attribute": null
+          },
+          "image": {
+            "selector": "div.panel-story-info div.story-info-left span.info-image img[src]",
+            "attribute": "src"
+          },
+          "url": {
+            "selector": "link[rel=\"canonical\"][href]",
+            "attribute": "href"
+          },
+          "description": {
+            "selector": ".panel-story-info-description",
+            "attribute": null
+          },
+          "chapters": {
+            "selector": "div.panel-story-chapter-list ul > li",
+            "attribute": null,
+            "order": "desc",
+            "mapping": {
+              "title": {
+                "selector": "a",
+                "attribute": null
+              },
+              "url": {
+                "selector": "a",
+                "attribute": "href"
+              },
+              "date": {
+                "selector": "span.chapter-time[title]",
+                "attribute": "title"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "headers": {}
+  }
+}
