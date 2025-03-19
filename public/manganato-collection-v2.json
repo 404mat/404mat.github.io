@@ -169,6 +169,8 @@
         }
       }
     ],
-    "headers": {}
+    "headers": {
+      "Referer": "https://chapmanganato.to/"
+    }
   }
 }
