@@ -6,12 +6,12 @@
     "version": "0.2.0",
     "author": "developer",
     "collectionLink": "https://404mat.github.io/manganato-collection.json",
-    "websiteLink": "https://manganato.com",
+    "websiteLink": "https://www.natomanga.com",
     "icon": "icon link or base64",
     "languages": ["en"]
   },
   "explore": {
-    "link": "https://manganato.com",
+    "link": "https://www.natomanga.com",
     "syntax": null,
     "dataFetching": [
       {
@@ -70,7 +70,7 @@
     "headers": {}
   },
   "search": {
-    "link": "https://manganato.com",
+    "link": "https://www.natomanga.com",
     "syntax": "/search/story/",
     "dataFetching": [
       {
