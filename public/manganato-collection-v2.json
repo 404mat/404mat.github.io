@@ -15,8 +15,8 @@
     "syntax": null,
     "dataFetching": [
       {
-        "elements": "div#owl-slider.owl-carousel:first-child > div.item",
-        "type": "TopWeek",
+        "elements": "div.container div.slide #owl-demo div.item",
+        "type": "Popular",
         "mapping": {
           "title": {
             "selector": "div.slide-caption h3 a[title]",
