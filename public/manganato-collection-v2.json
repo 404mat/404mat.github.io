@@ -42,7 +42,7 @@
       },
       {
         "elements": "div.panel-content-homepage:first-child > div.content-homepage-item",
-        "type": "NewReleases",
+        "type": "New Releases",
         "mapping": {
           "title": {
             "selector": "div.content-homepage-item-right h3 a[title]",
