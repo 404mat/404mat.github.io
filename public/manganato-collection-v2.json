@@ -67,7 +67,9 @@
         }
       }
     ],
-    "headers": {}
+    "headers": {
+      "Referer": "https://www.natomanga.com/"
+    }
   },
   "search": {
     "link": "https://www.natomanga.com",
