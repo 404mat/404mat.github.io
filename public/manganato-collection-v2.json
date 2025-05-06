@@ -154,7 +154,9 @@
         }
       }
     ],
-    "headers": {}
+    "headers": {
+      "Referer": "https://www.natomanga.com/"
+    }
   },
   "chapter": {
     "link": null,
