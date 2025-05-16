@@ -113,27 +113,27 @@
         "type": null,
         "mapping": {
           "title": {
-            "selector": "div.panel-story-info div.story-info-right h1",
+            "selector": "div.manga-info-content ul.manga-info-text h1",
             "attribute": null
           },
           "author": {
-            "selector": "todo",
+            "selector": "div.manga-info-content ul.manga-info-text li:contains(\"Author(s)\") a",
             "attribute": null
           },
           "image": {
-            "selector": "div.panel-story-info div.story-info-left span.info-image img[src]",
-            "attribute": "src"
+            "selector": "meta[property=\"og:image\"]",
+            "attribute": "content"
           },
           "url": {
             "selector": "link[rel=\"canonical\"][href]",
             "attribute": "href"
           },
           "description": {
-            "selector": ".panel-story-info-description",
+            "selector": "div#contentBox",
             "attribute": null
           },
           "chapters": {
-            "selector": "div.panel-story-chapter-list ul > li",
+            "selector": "div.chapter-list",
             "attribute": null,
             "order": "desc",
             "mapping": {
@@ -146,7 +146,7 @@
                 "attribute": "href"
               },
               "date": {
-                "selector": "span.chapter-time[title]",
+                "selector": ".row > span:last-child",
                 "attribute": "title"
               }
             }
