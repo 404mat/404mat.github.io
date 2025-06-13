@@ -163,7 +163,7 @@
     "syntax": null,
     "dataFetching": [
       {
-        "elements": "'.container-chapter-reader > img'",
+        "elements": ".container-chapter-reader > img",
         "type": null,
         "mapping": {
           "image": {
