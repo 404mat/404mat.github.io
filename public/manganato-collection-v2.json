@@ -5,7 +5,7 @@
     "description": "Read Manga Online Free",
     "version": "0.2.0",
     "author": "developer",
-    "collectionLink": "https://404mat.github.io/manganato-collection.json",
+    "collectionLink": "https://404mat.github.io/manganato-collection-v2.json",
     "websiteLink": "https://www.natomanga.com",
     "icon": "icon link or base64",
     "languages": ["en"]
