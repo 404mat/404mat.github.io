@@ -76,23 +76,23 @@
     "syntax": "/search/story/",
     "dataFetching": [
       {
-        "elements": "div.panel-search-story > div.search-story-item",
+        "elements": "div.panel_story_list > div.story_item",
         "type": null,
         "mapping": {
           "title": {
-            "selector": "div.item-right h3 a",
+            "selector": "div.story_item_right h3 a",
             "attribute": null
           },
           "author": {
-            "selector": "div.item-right span.item-author",
+            "selector": "div.story_item_right span::first-of-type",
             "attribute": null
           },
           "image": {
-            "selector": "img[src]",
+            "selector": "a img",
             "attribute": "src"
           },
           "url": {
-            "selector": "div.item-right h3 a[href]",
+            "selector": "a",
             "attribute": "href"
           },
           "description": {
