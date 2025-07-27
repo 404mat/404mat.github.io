@@ -102,7 +102,9 @@
         }
       }
     ],
-    "headers": {}
+    "headers": {
+      "Referer": "https://www.natomanga.com/"
+    }
   },
   "book": {
     "link": null,
