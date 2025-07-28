@@ -84,7 +84,7 @@
             "attribute": null
           },
           "author": {
-            "selector": "div.story_item_right span::first-of-type",
+            "selector": "div.story_item_right span:first-of-type",
             "attribute": null
           },
           "image": {
