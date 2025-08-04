@@ -1,17 +1,37 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Layout from '../layouts/Layout.astro';
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
+<Layout>
+  <main>
+    <h1 class="title">Hello</h1>
+    <p class="subtitle">
+      There is nothing here, but you can check out <a href="https://mathias.gg" target="_blank" rel="noopener noreferrer">my website</a> for more!
+    </p>
+  </main>
+</Layout>
 <style>
-  h1 {
-    color: orange;
+  .title {
+    font-size: 6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    text-align: center;
+    opacity: 0.7;
+  }
+  .subtitle a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary);
+    transition: opacity 0.3s ease;
+  }
+  .subtitle a:hover {
+    opacity: 0.8;
   }
 </style>
