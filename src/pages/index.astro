@@ -3,22 +3,44 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
   <main>
-    <h1 class="title">Hello</h1>
+    <h1 id="greeting" class="title">Hello</h1>
     <p class="subtitle">
       There is nothing here, but you can check out <a href="https://mathias.gg" target="_blank" rel="noopener noreferrer">my website</a> for more!
     </p>
   </main>
 </Layout>
+<script>
+  const greetings = [
+    'Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', 'Olá', 'Hallo',
+    'Привет', 'こんにちは', '你好', 'مرحبا', 'नमस्ते'
+  ];
+  let currentIndex = 0;
+  const greetingElement = document.getElementById('greeting');
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % greetings.length;
+    greetingElement.classList.add('fade-out');
+    
+    setTimeout(() => {
+      greetingElement.textContent = greetings[currentIndex];
+      greetingElement.classList.remove('fade-out');
+    }, 500);
+  }, 7000);
+</script>
 <style>
   .title {
     font-size: 6rem;
     font-weight: 400;
-    font-style: italic;
     color: var(--primary);
     text-align: center;
     margin-bottom: 1rem;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .title.fade-out {
+    opacity: 0;
   }
   .subtitle {
+    font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--text);
